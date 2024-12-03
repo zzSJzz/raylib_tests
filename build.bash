@@ -1,0 +1,1 @@
+g++ pong_game/main.cpp -o pong_game/pong_game.out -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
