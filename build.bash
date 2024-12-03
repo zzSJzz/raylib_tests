@@ -1,1 +1,2 @@
-g++ pong_game/main.cpp -o pong_game/pong_game.out -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+# g++ pong_game/main.cpp -o pong_game/pong_game.out -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+g++ space_invaders_example/main.cpp -o space_invaders_example/space_example.out -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
