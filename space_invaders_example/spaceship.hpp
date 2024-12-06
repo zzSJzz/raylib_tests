@@ -1,4 +1,7 @@
+#ifndef SPACESHIP_HPP
+#define SPACESHIP_HPP
 
+#include <raylib.h>
 
 class Spaceship
 {
@@ -16,3 +19,5 @@ class Spaceship
         Vector2 position;
 
 };
+
+#endif
