@@ -1,7 +1,7 @@
 #include <raylib.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "spaceship.hpp"
+#include "game.hpp"
 
 
 int main()
@@ -14,14 +14,15 @@ int main()
 
     SetTargetFPS(60);
 
-    Spaceship spaceship;
+    // Spaceship spaceship;
+    Game game;
 
     while (WindowShouldClose() == false)
     {
         BeginDrawing();
         ClearBackground(grey);
-        spaceship.Draw();
-
+        // spaceship.Draw();
+        game.Draw();
 
         EndDrawing();
     }

@@ -7,8 +7,8 @@ Spaceship::Spaceship()
     //Criando a variável da posição no workspace da imagem gráfica da nave
     image = LoadTexture("images/ship.png");
     // image = LoadTexture("Graphics/spaceship.png");
-    position.x = 100;
-    position.y = 100;
+    position.x = (GetScreenWidth() - image.width)/2;
+    position.y = (GetScreenHeight() - image.height);
 }
 
 //Toda vez que eu carregar uma imagem eu tenho que descarregar quando fechar a janela do jogo, liberando o espaço de memória, pra isso crio um desconstrutor
@@ -21,4 +21,5 @@ Spaceship::~Spaceship()
 void Spaceship::Draw()
 {
     DrawTextureV(image, position, WHITE);
+    //DrawTextureEx(image, (Vector2){position.x, position.y}, 0.0f, position.x, WHITE);
 }
