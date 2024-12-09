@@ -21,7 +21,7 @@ void Game::Draw()
     
 // }
 
-// void Game::HandleInput()
-// {
-
-// }
+void Game::HandleInput()
+{
+    if()
+}
