@@ -23,3 +23,21 @@ void Spaceship::Draw()
     DrawTextureV(image, position, WHITE);
     //DrawTextureEx(image, (Vector2){position.x, position.y}, 0.0f, position.x, WHITE);
 }
+
+void Spaceship::MoveLeft()
+{
+    position.x -= 7;
+    if (position.x < 0)
+    {
+        position.x = 0;
+    }
+}
+
+void Spaceship::MoveRight()
+{
+    position.x += 7;
+    if (position.x > GetScreenHeight())
+    {
+        position.x = GetScreenHeight();
+    }
+}

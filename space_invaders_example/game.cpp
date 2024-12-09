@@ -23,5 +23,11 @@ void Game::Draw()
 
 void Game::HandleInput()
 {
-    if()
+    if(IsKeyDown(KEY_LEFT))
+    {
+        spaceship.MoveLeft();
+    } else if( IsKeyDown(KEY_RIGHT))
+    {
+        spaceship.MoveRight();
+    }
 }

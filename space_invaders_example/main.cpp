@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "game.hpp"
-
+#include "laser.hpp"
 
 int main()
 {
@@ -16,6 +16,7 @@ int main()
 
     // Spaceship spaceship;
     Game game;
+    Laser laser = Laser({100, 100}, 7);
 
     while (WindowShouldClose() == false)
     {
@@ -23,7 +24,11 @@ int main()
         ClearBackground(grey);
         // spaceship.Draw();
         game.Draw();
+        game.HandleInput();
 
+        laser.Draw();
+        laser.Update();
+        
         EndDrawing();
     }
     
