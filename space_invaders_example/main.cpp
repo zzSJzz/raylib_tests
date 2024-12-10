@@ -25,9 +25,9 @@ int main()
         // spaceship.Draw();
         game.Draw();
         game.HandleInput();
-
-        laser.Draw();
-        laser.Update();
+        game.Update();
+        // laser.Draw();
+        // laser.Update();
         
         EndDrawing();
     }
