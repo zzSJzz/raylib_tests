@@ -20,6 +20,7 @@ class Spaceship
         /*Texture2D- Estrutura de dados representando uma imagem 2D, sendo usada na rendenização*/
         Texture2D image;
         Vector2 position;
+        double lastFireTime;
 
 };
 

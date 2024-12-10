@@ -22,6 +22,5 @@ void Laser::Update()
         if(position.y > GetScreenHeight() || position.y < 0)
         {
             active = false;
-            std::cout << "Laser Destroyed" << std::endl;
         }
 }

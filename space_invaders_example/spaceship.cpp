@@ -9,6 +9,7 @@ Spaceship::Spaceship()
     // image = LoadTexture("Graphics/spaceship.png");
     position.x = (GetScreenWidth() - image.width)/2;
     position.y = (GetScreenHeight() - image.height);
+    lastFireTime = 0.0;
 }
 
 //Toda vez que eu carregar uma imagem eu tenho que descarregar quando fechar a janela do jogo, liberando o espaço de memória, pra isso crio um desconstrutor
@@ -43,7 +44,13 @@ void Spaceship::MoveRight()
 }
 
 void Spaceship::FireLaser()
-{
-    lasers.push_back(Laser({position.x  + image.width/2 - 2, position.y}, 6));
+{   
+    if(GetTime() - lastFireTime >= 0.350)
+    {
+        lastFireTime = GetTime();
+        //-2 porque o valor do laser é de 4 pixels, logo 2 pixels de largura
+        //push_back tera a função de adicionar um valor ao ultimo vetor, dessa forma posso lançar varios objetos(lasers)
+        lasers.push_back(Laser({position.x  + image.width/2 - 2, position.y}, 6));
+    }
 
 }
