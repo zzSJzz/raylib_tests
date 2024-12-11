@@ -1,7 +1,7 @@
 #include "laser.hpp"
 #include <iostream>
 
-
+//Crio a classe laser que tem como parametro Vector(x, y) position e o speed
 Laser::Laser(Vector2 position, int speed)
 {
     this -> position = position;
@@ -12,7 +12,8 @@ Laser::Laser(Vector2 position, int speed)
 void Laser::Draw()
 {
     if (active)
-        DrawRectangle(position.x, position.y, 4, 15,{243, 216, 63, 255});
+        //Dentro das chaves eu seto a cor (padrao RGBA lpha - Transparencia - opaco)
+        DrawRectangle(position.x, position.y, 4, 15,{0, 0, 255, 255});
 }
 
 void Laser::Update()

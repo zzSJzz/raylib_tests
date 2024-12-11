@@ -29,7 +29,8 @@ void Game::Update()
     }
 
     DeleteInactiveLasers();
-    std::cout << "Vector size: " << spaceship.lasers.size() << std::endl;
+    // std::cout << "Vector size: " << spaceship.lasers.size() << std::endl;
+    //  conta o numero de lasers na tela
 }
 
 void Game::HandleInput()
