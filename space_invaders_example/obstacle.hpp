@@ -1,5 +1,5 @@
-#ifndef BLOCK_HPP
-#define BLOCK_HPP
+#ifndef OBSTACLE_HPP
+#define OBSTACLE_HPP
 
 #include <vector>
 #include <raylib.h>
@@ -13,9 +13,9 @@ class Obstacle
         void Draw();
         Vector2 position;
         std::vector<Block> blocks;
-        std::vector<std::vector<int>> grid;
+        static std::vector<std::vector<int>> grid;
     private:
-}
+};
 
 
 #endif

@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "game.hpp"
-#include "laser.hpp"
+// #include "obstacle.hpp"
+// #include "laser.hpp"
 
 int main()
 {
@@ -16,7 +17,8 @@ int main()
 
     // Spaceship spaceship;
     Game game;
-    Laser laser = Laser({100, 100}, 7);
+    // Laser laser = Laser({100, 100}, 7);  - Não é necessário pois declaro na lib spaceship.hpp
+    // Obstacle obstacle = Obstacle({100,100});
 
     while (WindowShouldClose() == false)
     {
@@ -28,6 +30,8 @@ int main()
         game.Update();
         // laser.Draw();
         // laser.Update();
+        
+        // obstacle.Draw();
         
         EndDrawing();
     }
