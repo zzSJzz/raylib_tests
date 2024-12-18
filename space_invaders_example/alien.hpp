@@ -11,6 +11,7 @@ class Alien
         void Draw();
         int GetType();
         Texture2D image;
+        static Texture2D ship1Texture;
         int type;
         Vector2 position;
     private:
