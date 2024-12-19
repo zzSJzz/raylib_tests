@@ -8,26 +8,27 @@ Alien::Alien(int type, Vector2 position)
     this -> position = position;
 
     Image reszImage; // Crio um objeto que vai carregar a imagem e usar a funcao resize para mudar seu tamanho
-
-    switch (type)
+    if (alienImages[type - 1].id == 0)
     {
-    case 1:
-        reszImage = LoadImage("images/enemy/ship1.png");
-        break;
-    
-    case 2:
-        reszImage = LoadImage("images/enemy/ship2.png");
-        break;
+        switch (type)
+        {
+        case 1:
+            alienImages[0] = LoadImage("images/enemy/ship1.png");
+            break;
         
-    case 3:
-        reszImage = LoadImage("images/enemy/ship3.png");
-        break;
+        case 2:
+            alienImages[1] = LoadImage("images/enemy/ship2.png");
+            break;
+            
+        case 3:
+            alienImages[2] = LoadImage("images/enemy/ship3.png");
+            break;
 
-    default:
-        reszImage = LoadImage("images/enemy/ship1.png");
-        break;
+        default:
+            alienImages[0] = LoadImage("images/enemy/ship1.png");
+            break;
+        }
     }
-
     ImageResize(&reszImage, 50, 50); //Redimeniono a imagem
     image = LoadTextureFromImage(reszImage); //Converto a reszimagem em textura e a guardo na variavel imagem
     
